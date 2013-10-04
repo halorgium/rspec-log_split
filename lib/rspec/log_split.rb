@@ -52,7 +52,7 @@ module RSpec
       end
 
       def logger(path)
-        file = File.open(path, "w")
+        file = File.open(path, "a")
         file.sync = true
         Logger.new(file)
       end
