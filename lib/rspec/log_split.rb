@@ -41,14 +41,20 @@ module RSpec
         timestamp = Time.now.iso8601
         @path = Pathname.new(dir).join(timestamp)
         @path.mkpath
-        @logger = Logger.new(@path.join("main"))
+        @logger = logger(@path.join("main"))
       end
 
       def run(example, &block)
         example_path = @path.join(example.location)
         example_path.parent.mkpath
-        example_logger = Logger.new(example_path.to_path)
+        example_logger = logger(example_path.to_path)
         MyExample.new(@logger, @mod, example, example_logger).run(&block)
+      end
+
+      def logger(path)
+        file = File.open(path, "w")
+        file.sync = true
+        Logger.new(file)
       end
     end
 
