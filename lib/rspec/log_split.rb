@@ -1,4 +1,5 @@
 require 'logger'
+require 'pathname'
 
 module RSpec
   module LogSplit
