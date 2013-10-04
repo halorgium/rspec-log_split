@@ -39,8 +39,7 @@ module RSpec
       def initialize(mod, dir)
         @mod = mod
 
-        timestamp = Time.now.iso8601
-        @path = Pathname.new(dir).join(timestamp)
+        @path = Pathname.new(dir)
         @path.mkpath
         @logger = logger(@path.join("main"))
       end
