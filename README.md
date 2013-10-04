@@ -27,3 +27,12 @@ RSpec.configure do |config|
   config.log_split_module = Rails
 end
 ```
+
+You will get a log file for each example as follows:
+```
+log/2013-10-05T00:47:14+13:00/main
+log/2013-10-05T00:47:14+13:00/spec/demo_spec.rb:5
+log/2013-10-05T00:47:14+13:00/spec/demo_spec.rb:9
+log/2013-10-05T00:47:14+13:00/spec/support/shared_examples/win.rb:2
+log/2013-10-05T00:47:14+13:00/spec/support/shared_examples/win.rb:7
+```
