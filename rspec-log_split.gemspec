@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "rspec-log_split"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2.pre"
   spec.authors       = ["Tim Carey-Smith"]
   spec.email         = ["tim@spork.in"]
   spec.description   = %q{A new logger for each example}
